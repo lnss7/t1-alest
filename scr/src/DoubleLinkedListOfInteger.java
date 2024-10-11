@@ -25,31 +25,16 @@ public class DoubleLinkedListOfInteger {
     /**********************************************************************************
      /*** CREATE | Operações de inserção de dados na lista duplamente encadeada
      /**********************************************************************************
+     */
 
-     /** */
-//    public void staticToDynamic(Integer[] staticList) {
-//        for (int i = 0; i < staticList.length; i++) {
-//            this.add(staticList[i]);
-//        }
-//    }
+     //metodo para converter o vetor em uma lista dinamica duplamente encadeada
 
-    // Método para converter a lista estática para dinâmica
-    public static DoubleLinkedListOfInteger staticToDynamic(Integer[] staticList) {
-        DoubleLinkedListOfInteger dynamicList = new DoubleLinkedListOfInteger();
-
-        for (int i = 0; i < staticList.length; i += 2) {
-            int value = staticList[i];
-            int position = staticList[i + 1];
-
-            if (position < 0 || position > dynamicList.count) {
-                throw new IndexOutOfBoundsException("Posição inválida na lista dinâmica.");
-            }
-
-            dynamicList.add(position, value);
-        }
-
-        return dynamicList;
-    }
+     public void staticToDynamic(Integer[] staticList){
+         for(int i = 0; i < staticList.length; i++){
+             add(staticList[i]);
+             staticToDynamic(staticList);
+         }
+     }
 
     /**
      * Método add() padrão

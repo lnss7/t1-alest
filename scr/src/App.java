@@ -25,9 +25,6 @@ public class App {
         staticList[19] = 4;
 
         // Convertendo a lista estática para lista dinâmica
-        DoubleLinkedListOfInteger dynamicList = DoubleLinkedListOfInteger.staticToDynamic(staticList);
-
-        System.out.println("Lista dinâmica gerada: " + dynamicList);
 
         DoubleLinkedListOfInteger dlist = new DoubleLinkedListOfInteger();
         dlist.add(10);
