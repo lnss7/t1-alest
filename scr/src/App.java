@@ -3,27 +3,8 @@ public class App {
     public static void main(String[] args) {
         DoubleLinkedListOfInteger dlist = new DoubleLinkedListOfInteger();
 
-        Integer [] staticList = new Integer [20];
-        staticList[0] = 70;
-        staticList[1] = 2;
-        staticList[2] = 30;
-        staticList[3] = 9;
-        staticList[4] = 20;
-        staticList[5] = 3;
-        staticList[6] = 50;
-        staticList[7] = 7;
-        staticList[8] = 60;
-        staticList[9] = 0;
-        staticList[10] = 80;
-        staticList[11] = 5;
-        staticList[12] = 10;
-        staticList[13] = 1;
-        staticList[14] = 100;
-        staticList[15] = 6;
-        staticList[16] = 90;
-        staticList[17] = 8;
-        staticList[18] = 40;
-        staticList[19] = 4;
+        Integer[] staticList = {70, 2, 30, 9, 20, 3, 50, 7, 60, 0, 80, 5, 10, 1, 100, 6, 90, 8, 40, 4};
+
 
         // Convertendo a lista estática para lista dinâmica
         dlist.staticToDynamic(staticList);
