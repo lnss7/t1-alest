@@ -1,6 +1,7 @@
 public class App {
 
     public static void main(String[] args) {
+        DoubleLinkedListOfInteger dlist = new DoubleLinkedListOfInteger();
 
         Integer [] staticList = new Integer [20];
         staticList[0] = 70;
@@ -25,8 +26,8 @@ public class App {
         staticList[19] = 4;
 
         // Convertendo a lista estática para lista dinâmica
+        dlist.staticToDynamic(staticList);
 
-        DoubleLinkedListOfInteger dlist = new DoubleLinkedListOfInteger();
         dlist.add(10);
         dlist.add(20);
         dlist.add(30);
