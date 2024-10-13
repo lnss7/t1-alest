@@ -319,8 +319,18 @@ public class DoubleLinkedListOfInteger {
      * @return void
      */
     public void mergeLists(DoubleLinkedListOfInteger list2) {
-        // Implementação do método
+        if (list2.isEmpty()) {
+            return;
+        }
+
+        Node aux = list2.header.next;
+
+        while (aux != list2.trailer) {
+            this.add(aux.element);
+            aux = aux.next;
+        }
     }
+
 
     /**
      * MÉTODO 5: removeRange
