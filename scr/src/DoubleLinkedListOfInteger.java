@@ -31,7 +31,7 @@ public class DoubleLinkedListOfInteger {
 
      public void staticToDynamic(Integer[] staticList) {
         for (int i = 0; i < staticList.length; i++) {
-            add(staticList[i]);  // Adiciona cada elemento à lista dinâmica
+            add(staticList[i]);
         }
      }
 
@@ -307,5 +307,48 @@ public class DoubleLinkedListOfInteger {
         }
         return s.toString();
     }
+
+    /**
+     * MÉTODO 3: mergeLists
+     *
+     * Mescla a lista fornecida como parâmetro ao final da lista atual, unindo os elementos das duas listas.
+     * Após a execução, a lista atual conterá todos os elementos de ambas as listas na ordem original.
+     * Combinar dois conjuntos de dados sequenciais em uma única sequência contínua.
+     *
+     * @param list2 a lista do tipo DoubleLinkedListOfInteger que será mesclada à lista atual
+     * @return void
+     */
+    public void mergeLists(DoubleLinkedListOfInteger list2) {
+        // Implementação do método
+    }
+
+    /**
+     * MÉTODO 5: removeRange
+     *
+     * Remove os elementos da lista desde a posição start (inclusiva) até a posição stop (exclusiva).
+     * Os elementos entre essas posições serão removidos da lista atual. Remover um subconjunto de elementos da lista com base em suas posições.
+     *
+     * @param start posição inicial (inclusiva) da remoção
+     * @param stop posição final (exclusiva) da remoção
+     * @return void
+     */
+    public void removeRange(int start, int stop) {
+        // Implementação do método
+    }
+
+    /**
+     * MÉTODO 7: removeLowerThan
+     *
+     * Remove da lista todos os elementos cujo valor seja menor que o valor especificado.
+     * Este método modifica a lista atual, eliminando os elementos que atendem ao critério.
+     * Limpar da lista todos os valores que não atendem a um critério mínimo.
+     *
+     * @param value valor de referência; elementos menores que este valor serão removidos
+     * @return void
+     */
+    public void removeLowerThan(int value) {
+        // Implementação do método
+    }
+
 
 }
