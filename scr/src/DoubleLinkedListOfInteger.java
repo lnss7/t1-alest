@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * CLASSE DoubleLinkedListOfInteger
  * Trabalhando com estruturas lineares em formato de listas duplamente encadeadas
@@ -29,11 +32,16 @@ public class DoubleLinkedListOfInteger {
 
      //metodo para converter o vetor em uma lista dinamica duplamente encadeada
 
-     public void staticToDynamic(Integer[] staticList) {
-        for (int i = 0; i < staticList.length; i++) {
-            add(staticList[i]);
+    public void staticToDynamic(Integer[] staticList) {
+        Map<Integer,Integer> dictionary = new HashMap<Integer,Integer>();
+        for (int i = 0; i < staticList.length; i += 2) {
+            dictionary.put(staticList[i+1], staticList[i]);
         }
-     }
+
+        for (int i = 0; i < staticList.length/2; i++) {
+            add(dictionary.get(i));
+        }
+    }
 
 
     /**
