@@ -1,3 +1,5 @@
+import java.util.EmptyStackException;
+
 public class StackOfInteger {
 
     private DoubleLinkedListOfInteger list;
@@ -11,8 +13,11 @@ public class StackOfInteger {
      * @return Integer o valor do elemento no topo da pilha.
      */
     public Integer top() {
-        // Implementação do método
-        return 0;
+        if (list.size() == 0) {
+            throw new RuntimeException("A pilha está vazia! ");
+        }
+        Integer element = list.get(list.size() - 1);
+        return element;
     }
 
     /**
@@ -20,8 +25,11 @@ public class StackOfInteger {
      * @return Integer o valor do elemento removido do topo da pilha.
      */
     public Integer pop() {
-        // Implementação do método
-        return 0;
+        if (list.size() == 0) {
+            throw new RuntimeException("A pilha está vazia! ");
+        }
+        Integer elementRemoved = list.removeByIndex(list.size() - 1);
+        return elementRemoved;
     }
 
     /**
@@ -29,7 +37,7 @@ public class StackOfInteger {
      * @param value o valor do elemento a ser inserido na pilha.
      */
     public void push(Integer value) {
-        // Implementação do método
+        list.add(value);
     }
 
 }
