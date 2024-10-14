@@ -6,14 +6,15 @@ public class QueueOfInteger {
         this.list = new DoubleLinkedListOfInteger();
     }
 
-
     /**
      * Retorna o elemento que está no início da fila sem removê-lo.
      * @return Integer o valor do elemento no início da fila.
      */
     public Integer head() {
-        // Implementação do método
-        return 0;
+        if (list.isEmpty()) {
+            throw new RuntimeException("A fila está vazia.");
+        }
+        return list.get(0);
     }
 
     /**
@@ -21,8 +22,11 @@ public class QueueOfInteger {
      * @return Integer o valor do elemento no início da fila.
      */
     public Integer dequeue() {
-        // Implementação do método
-        return 0;
+        if (list.isEmpty()) {
+            throw new RuntimeException("A fila está vazia.");
+        }
+        Integer value = list.removeByIndex(0);
+        return value;
     }
 
     /**
@@ -31,7 +35,7 @@ public class QueueOfInteger {
      * @return void
      */
     public void enqueue(Integer value) {
-        // Implementação do método
+        list.add(value);
     }
 
 }
