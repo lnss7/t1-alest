@@ -38,4 +38,22 @@ public class QueueOfInteger {
         list.add(value);
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        if (list.isEmpty()) {
+            return "Fila vazia";
+        }
+
+        for (int i = 0; i < list.size(); i++) {
+            sb.append(list.get(i));
+            if (i < list.size() - 1) {
+                sb.append(" -> ");
+            }
+        }
+
+        return sb.toString();
+    }
+
 }
