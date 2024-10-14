@@ -13,6 +13,7 @@ public class QueueOfInteger {
      */
     public Integer head() {
         // Implementação do método
+        return 0;
     }
 
     /**
@@ -21,6 +22,7 @@ public class QueueOfInteger {
      */
     public Integer dequeue() {
         // Implementação do método
+        return 0;
     }
 
     /**

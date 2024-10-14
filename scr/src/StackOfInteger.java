@@ -12,6 +12,7 @@ public class StackOfInteger {
      */
     public Integer top() {
         // Implementação do método
+        return 0;
     }
 
     /**
@@ -20,6 +21,7 @@ public class StackOfInteger {
      */
     public Integer pop() {
         // Implementação do método
+        return 0;
     }
 
     /**

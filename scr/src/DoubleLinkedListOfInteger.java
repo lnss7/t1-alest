@@ -351,7 +351,17 @@ public class DoubleLinkedListOfInteger {
      * @return void
      */
     public void removeRange(int start, int stop) {
-        // Implementação do método
+        if (start < 0 || stop > count || start >= stop) {
+            throw new IndexOutOfBoundsException("Parâmetros inválidos! ");
+        }
+
+        Node nodeStart = getNodeIndex(start);
+        Node nodeStop = getNodeIndex(stop);
+
+        nodeStart.prev.next = nodeStop;
+        nodeStop.prev = nodeStart.prev;
+
+        count -= (stop - start);
     }
 
     /**
@@ -365,8 +375,16 @@ public class DoubleLinkedListOfInteger {
      * @return void
      */
     public void removeLowerThan(int value) {
-        // Implementação do método
-    }
+        Node current = header.next;
 
+        while (current != trailer) {
+            if (current.element < value) {
+                Node proxNode = current.next;
+                remove(current.element);
+                current = proxNode;
+            } else
+                current = current.next;
+        }
+    }
 
 }
